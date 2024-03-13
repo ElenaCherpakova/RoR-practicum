@@ -1,24 +1,31 @@
-# README
+# Firefish Project - Travel app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app can be used to plan for travels by building an itenerary. Firefish students and React students will team up to practice everything learned from previous classes.
 
-Things you may want to cover:
+## Google Drive Link
+https://github.com/users/ElenaCherpakova/projects/2/views/1
 
-* Ruby version
+## Front-End Repo
+https://github.com/anniethewebcoder/firefish-practicum-frontend
 
-* System dependencies
+## MVP and Stretch goals
+https://docs.google.com/document/d/11x6IiLobgSv9nSVWiJgmuIsjhN1IFt5iNeCNvN7XNz0/edit
 
-* Configuration
+## Setting Up Rails
 
-* Database creation
+https://classes.codethedream.org/course/ruby-on-rails/firefish?page=machine-setup
 
-* Database initialization
+The article above has instructions for Mac, Ubuntu, and Windows. 
 
-* How to run the test suite
+Note: We are using Ruby version 3.2.1
+Rails version is not that important
 
-* Services (job queues, cache servers, search engines, etc.)
+## Setting up the Backend Repo on you machine
 
-* Deployment instructions
+Clone the the repo:
 
-* ...
+    git clone https://github.com/ElenaCherpakova/RoR-practicum.git
+
+Make sure to create a dev-main branch
+
+    git checkout -b dev-main origin/dev-main
