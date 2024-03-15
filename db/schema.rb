@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_132158) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_countries_on_name", unique: true
   end
 
 end
