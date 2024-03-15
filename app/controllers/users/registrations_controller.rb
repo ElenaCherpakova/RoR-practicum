@@ -1,4 +1,4 @@
-class Users::RegistrationsController < ApplicationController
+class Users::RegistrationsController < Devise::RegistrationsController
     respond_to :json
 
     private
@@ -13,7 +13,7 @@ class Users::RegistrationsController < ApplicationController
       render json: { message: 'Signed up successfully.' }, status: :created
     end
 
-    def register_failed
+    def register_failed resource
       render json: { message: resource.errors.full_messages }, status: :bad_request
     end
 end
