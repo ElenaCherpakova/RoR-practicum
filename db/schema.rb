@@ -15,8 +15,26 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_14_020558) do
     t.string "name"
     t.integer "user_id"
     t.integer "city_id"
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "place_type"
+    t.text "description"
+    t.integer "rating"
+    t.string "api_id"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "city_id", null: false
+    t.index ["city_id"], name: "index_places_on_city_id"
+  end
+
+  add_foreign_key "places", "cities"
 end
