@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: "Eiffel Tower"
+  address: "Paris, France"
+  place_type: "Landmark"
+  description: "A nice place to visit."
+  rating: 5
+  api_id: "a1"
+  image_url: "http://example.com"
+
+two:
+  name: "Louvre Museum"
+  address: "123 Sample Street"
+  place_type: "musuem"
+  description: "art museum."
+  rating: 5
+  api_id: "b2"
+  image_url: "http://example.com"
