@@ -8,6 +8,7 @@ one:
   rating: 5
   api_id: "a1"
   image_url: "http://example.com"
+  city: one
 
 two:
   name: "Louvre Museum"
@@ -17,3 +18,4 @@ two:
   rating: 5
   api_id: "b2"
   image_url: "http://example.com"
+  city: two
