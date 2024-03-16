@@ -6,7 +6,7 @@ class CollectionTest < ActiveSupport::TestCase
     assert collection.valid?
     assert collection.save
   end
-  test 'invlaid without collection name' do
+  test 'invalid without collection name' do
     collection = Collection.new(user_id: 1, city_id: 1)
     collection.name = nil
     refute collection.valid?, 'Collection is invalid without name'
