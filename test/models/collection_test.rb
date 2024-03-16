@@ -18,4 +18,9 @@ class CollectionTest < ActiveSupport::TestCase
     refute collection.valid?, 'Collection is invalid without user'
     assert_equal ['must exist'], collection.errors[:user], 'Expected error msg for missing user'
   end
+  test "collection can't be created without city" do
+    collection = Collection.new(name: 'Test', user_id: 1)
+    refute collection.valid?, 'Collection is invalid without city'
+    assert_equal ["can't be created without city"], collection.errors[:city]
+  end
 end
