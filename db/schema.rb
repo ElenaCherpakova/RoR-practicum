@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_15_174538) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_17_224729) do
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -25,6 +25,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_15_174538) do
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_collections_on_city_id"
     t.index ["user_id"], name: "index_collections_on_user_id"
+  end
+
+  create_table "collections_places", id: false, force: :cascade do |t|
+    t.integer "collection_id", null: false
+    t.integer "place_id", null: false
+    t.index ["collection_id", "place_id"], name: "index_collections_places_on_collection_id_and_place_id", unique: true
+    t.index ["collection_id"], name: "index_collections_places_on_collection_id"
+    t.index ["place_id"], name: "index_collections_places_on_place_id"
   end
 
   create_table "places", force: :cascade do |t|
@@ -43,5 +51,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_15_174538) do
 
   add_foreign_key "collections", "cities"
   add_foreign_key "collections", "users"
+  add_foreign_key "collections_places", "collections"
+  add_foreign_key "collections_places", "places"
   add_foreign_key "places", "cities"
 end
