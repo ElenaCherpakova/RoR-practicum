@@ -27,6 +27,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_19_052707) do
     t.index ["user_id"], name: "index_collections_on_user_id"
   end
 
+  create_table "collections_places", id: false, force: :cascade do |t|
+    t.integer "collection_id", null: false
+    t.integer "place_id", null: false
+    t.index ["collection_id", "place_id"], name: "index_collections_places_on_collection_id_and_place_id", unique: true
+    t.index ["collection_id"], name: "index_collections_places_on_collection_id"
+    t.index ["place_id"], name: "index_collections_places_on_place_id"
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -55,5 +63,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_19_052707) do
 
   add_foreign_key "collections", "cities"
   add_foreign_key "collections", "users"
+  add_foreign_key "collections_places", "collections"
+  add_foreign_key "collections_places", "places"
   add_foreign_key "places", "cities"
 end
