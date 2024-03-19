@@ -11,6 +11,9 @@ https://github.com/anniethewebcoder/firefish-practicum-frontend
 ## MVP and Stretch goals
 https://docs.google.com/document/d/11x6IiLobgSv9nSVWiJgmuIsjhN1IFt5iNeCNvN7XNz0/edit
 
+## ERD or Schema
+https://app.diagrams.net/#G1xfRhAcDjnsQEfdo20T75Njp4gRej5f-U#%7B%22pageId%22%3A%22cqxSL7ESD8t7_2KHPBbb%22%7D
+
 ## Setting Up Rails
 
 https://classes.codethedream.org/course/ruby-on-rails/firefish?page=machine-setup
