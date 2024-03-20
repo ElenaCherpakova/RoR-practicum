@@ -1,51 +1,60 @@
+# frozen_string_literal:true
+
+# Controller for managing collections
 class CollectionsController < ApplicationController
-  before_action :set_collection, only: %i[ show update destroy ]
+  before_action :set_collection, only: %i[show edit update destroy]
 
   # GET /collections
   def index
     @collections = Collection.all
-
-    render json: @collections
   end
 
   # GET /collections/1
-  def show
-    render json: @collection
+  def show; end
+
+  # GET /collections/new
+  def new
+    @collection = Collection.new
   end
+
+  # GET /collections/1/edit
+  def edit; end
 
   # POST /collections
   def create
     @collection = Collection.new(collection_params)
 
     if @collection.save
-      render json: @collection, status: :created, location: @collection
+      redirect_to @collection, notice: 'Collection was successfully created.'
     else
-      render json: @collection.errors, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /collections/1
   def update
     if @collection.update(collection_params)
-      render json: @collection
+      redirect_to @collection, notice: 'Collection was successfully updated.', status: :see_other
     else
-      render json: @collection.errors, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
   # DELETE /collections/1
   def destroy
     @collection.destroy!
+    redirect_to collections_url, notice: 'Collection was successfully destroyed.', status: :see_other
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_collection
-      @collection = Collection.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def collection_params
-      params.require(:collection).permit(:name, :user_id, :city_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_collection
+    @collection = Collection.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def collection_params
+    params.require(:collection).permit(:name, :user_id, :city_id)
+  end
 end
