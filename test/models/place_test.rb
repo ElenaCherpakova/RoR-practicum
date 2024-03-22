@@ -14,7 +14,7 @@ class PlaceTest < ActiveSupport::TestCase
   end
 
   test "should not save place without city" do
-    place = Place.new(name: "Some place", address: "some address", place_type: "musuem", description: "some text", rating: 5, api_id: "a1", image_url: "http://example.com/image.jpg")
+    place = Place.new(name: "Some place", address: "some address", place_type: "musuem", description: "some text", rating: 5, image_url: "http://example.com/image.jpg")
     assert_not place.valid?, "Place saved without a city"
   end
 end
