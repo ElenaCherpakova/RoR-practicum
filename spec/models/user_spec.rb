@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+<<<<<<< HEAD
 RSpec.describe Collection, type: :model do
   describe 'creating' do
     before(:each) do
@@ -33,5 +34,14 @@ RSpec.describe Collection, type: :model do
         expect(collection.city).to eq(@city)
       end
     end
+=======
+RSpec.describe User, type: :model do
+  it 'is database authenticable' do
+    user = User.create(
+      email: 'test@example',
+      password: 'a7&43Wcxy6ij'
+    )
+    expect(user.valid_password?('a7&43Wcxy6ij')).to be_truthy
+>>>>>>> 5de7128933a8639d282082d93864ca01428abb57
   end
 end
