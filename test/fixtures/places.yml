@@ -6,7 +6,6 @@ one:
   place_type: "Landmark"
   description: "A nice place to visit."
   rating: 5
-  api_id: "a1"
   image_url: "http://example.com"
   city: one
 
@@ -16,6 +15,5 @@ two:
   place_type: "musuem"
   description: "art museum."
   rating: 5
-  api_id: "b2"
   image_url: "http://example.com"
   city: two
