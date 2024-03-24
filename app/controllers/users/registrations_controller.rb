@@ -12,6 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def register_failed(resource)
+    print(resource.errors.full_messages)
     # here we need to throw an error
     # @error_message = resource.errors.full_messages.join(', ')
     render :new

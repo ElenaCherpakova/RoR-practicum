@@ -12,7 +12,18 @@
 
 </head>
 <body>
+     
    <%=render 'layouts/navbar'%>
+
+ <% if user_signed_in? %>
+    <p class="m-0 mr-2">Welcome, <strong><%= current_user.email %></strong>!</p>
+    <div class="ms-md-2 ms-auto mt-2 mt-md-0">
+      <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-light"%>
+    </div>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+    <%= link_to "Login", new_user_session_path, class: "btn btn-primary mx-2" %>
+  <% end %>
     <main>
       <%= yield %>
     </main>
