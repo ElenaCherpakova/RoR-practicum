@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+      <a class="navbar-link" href="<%= root_path %>">TripTag</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #e3f2fd;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-lg-0">
+         <% if user_signed_in? %>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="<%= collection_path %>">Collections</a>
+        </li>
+        <%end%>
+      </ul>
+      </form>
+   <div class="d-flex justify-content-md-between justify-content-between-sm align-items-baseline">
+  <% if user_signed_in? %>
+    <p class="m-0 mr-2">Welcome, <strong><%= current_user.email %></strong>!</p>
+    <div class="ms-md-2 ms-auto mt-2 mt-md-0">
+      <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-light"%>
+    </div>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+    <%= link_to "Login", new_user_session_path, class: "btn btn-primary mx-2" %>
+  <% end %>
+</div>
+
+    </div>
+  </div>
+</nav>
