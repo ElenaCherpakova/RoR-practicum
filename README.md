@@ -2,7 +2,7 @@
 
 This app can be used to plan for travels by building an itenerary. Firefish students and React students will team up to practice everything learned from previous classes.
 
-## Google Drive Link
+## Kanban Board
 https://github.com/users/ElenaCherpakova/projects/2/views/1
 
 ## Front-End Repo
@@ -32,3 +32,12 @@ Clone the the repo:
 Make sure to create a dev-main branch
 
     git checkout -b dev-main origin/dev-main
+
+## Creating the .env file and assigning the right API token
+
+  1. Open the ".env.example" file
+  2. In your root directory, create a file named ".env"
+  3. Open the newly created .env file
+  4. Copy the variables listed in the ".env.example" file and paste it onto the .env file
+  5. In our Google Drive: https://docs.google.com/document/u/2/ open the API Tokens file
+  6. Copy the token and paste it to the corresponding environment variable in the ".env" file
