@@ -1,5 +1,5 @@
 class City < ApplicationRecord
-    has_many :places
+  has_many :places
 
-    validates :name, presence: true
+  validates :name, presence: true
 end
