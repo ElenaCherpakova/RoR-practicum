@@ -33,7 +33,7 @@ RSpec.describe Place, type: :model do
   end
 
   it "is not valid if the rating is not an integer" do
-    subject.rating="A"
+    subject.rating = "A"
     expect(subject).to_not be_valid
   end
 

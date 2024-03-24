@@ -52,7 +52,6 @@ group :development do
   # gem "spring"
 end
 
-
 gem "devise", "~> 4.9"
 
 gem "email_validator", "~> 2.2"
