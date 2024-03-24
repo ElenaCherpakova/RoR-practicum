@@ -1,6 +1,4 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  respond_to :json
-
   private
 
   def respond_with(resource, _opts = {})
@@ -10,10 +8,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def register_success
-    render json: { message: 'Signed up sucessfully.' }, status: :created
+    redirect_to root_path, notice: 'Signed up sucessfully.'
   end
 
   def register_failed(resource)
-    render json: { message: resource.errors.full_messages }, status: :bad_request
+    # here we need to throw an error
+    # @error_message = resource.errors.full_messages.join(', ')
+    render :new
   end
 end
