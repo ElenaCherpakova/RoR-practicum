@@ -7,6 +7,7 @@ class PlacesController < ApplicationController
       req.params["filter"] = "place:51ed56e07547c754c059a9b64027292a4040f00101f901a578020000000000c0020a"
       req.params["limit"] = 5
     end
+    debugger
   end
 
   private
