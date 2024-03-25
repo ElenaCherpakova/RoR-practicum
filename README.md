@@ -37,5 +37,5 @@ Make sure to create a dev-main branch
   2. In your root directory, create a file named ".env"
   3. Open the newly created .env file
   4. Copy the variables listed in the ".env.example" file and paste it onto the .env file
-  5. In our Google Drive: https://docs.google.com/document/u/2/ open the API Tokens file
+  5. In our Google Drive, go to the [API Tokens](https://docs.google.com/document/d/1dUSup56OvHKJWdhSUIE5RjaJvZmXjGY0zBlD3qfzys8/edit?pli=1) file
   6. Copy the token and paste it to the corresponding environment variable in the ".env" file
