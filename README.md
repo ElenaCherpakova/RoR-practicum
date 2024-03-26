@@ -30,3 +30,11 @@ Clone the repo:
 Make sure to create a dev-main branch
 
     git checkout -b dev-main origin/dev-main
+
+### Setting up the master key for the development environment
+
+https://docs.google.com/document/d/1hG8qxppgxV9JiCqtOenOON5H-VXuxm0aVOkYyNMY7Zc/edit
+
+After following the steps in the document, run the following command to verify that there are no errors
+
+    bin/rails credentials:show
