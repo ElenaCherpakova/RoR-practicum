@@ -75,3 +75,9 @@ gem "devise", "~> 4.9"
 gem "email_validator", "~> 2.2"
 
 gem "strong_password", "~> 0.0.10"
+
+gem "bootstrap", "~> 5.3"
+
+gem 'sassc-rails'
+
+gem 'font-awesome-rails'

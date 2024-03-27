@@ -14,3 +14,6 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym "RESTful"
 # end
+
+# Include Bootstrap JavaScripts in the asset pipeline
+Rails.application.config.assets.precompile += %w( bootstrap.min.js popper.js)
