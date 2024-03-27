@@ -1,0 +1,42 @@
+<!-- navbar -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <%= image_tag "logo-1.png", class:"rounded float-start" %>
+    <div style="display: flex; gap: 10px;" class="justify-content-sm-center">
+      <div>
+        <%= link_to "Login", new_user_session_path, class: "btn btn-outline-primary" %>
+      </div>
+      <div class="d-grid gap-2 d-sm-flex">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-success" %>
+      </div>
+    </div>
+  </div>
+</nav> <!-- /navbar -->
+
+<!-- search places -->
+<div>
+
+</div>
+<body>
+  <div style="margin-top: 70px">
+    <div class="search-container">
+      <h1 class="display-1 fw-bold mt-3">E</h1><p class="display-6 fw-bold mt-5">XPLORE</p>
+    </div>
+    <p class="display-6 text-center fw-bold">the best places in the world!</p>
+  </div>
+  <div class="search-container">
+    <%= form_tag('/search', method: :get) do %>
+      <%= text_field_tag(:key, nil, placeholder:'place to go, things to do...') %>
+      <%# <i class="fa-solid fa-magnifying-glass"></i> %>
+      <%= submit_tag("Search", class:"btn btn-outline-primary") %>
+    <% end %>
+  </div>
+  <!-- Other content goes here -->
+</body> <!-- /search places -->
+
+<!-- footer-->
+<footer class="bg-light text-lg-star fixed-bottom" style="background-color: gray; margin-top: 50px">
+  <div class="p-3">
+    <p id="copyright" class="mb-2">© 2024 TripTag. All rights reserved.</p>
+  </div>
+</footer>  <!-- /footer-->

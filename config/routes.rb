@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'page#index'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
@@ -6,6 +7,9 @@ Rails.application.routes.draw do
   get '/test', to: 'test#show'
   resources :places
   resources :collections
+
+  get '/search', to: 'posts#search'
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
