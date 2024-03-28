@@ -3,6 +3,12 @@
 This app can be used to plan for travels by building an itinerary. Firefish students will practice everything learned
 from previous classes, and go beyond by integrating with a third-party API.
 
+## CI statuses
+
+| `main` | `dev-main` |
+| ------ | ---------- |
+| ![CI badge for main](https://github.com/ElenaCherpakova/RoR-practicum/actions/workflows/ci.yml/badge.svg?branch=main) | ![CI badge for dev-main](https://github.com/ElenaCherpakova/RoR-practicum/actions/workflows/ci.yml/badge.svg?branch=dev-main) |
+
 ## Kanban Board
 https://github.com/users/ElenaCherpakova/projects/2/views/1
 
