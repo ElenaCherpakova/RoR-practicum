@@ -31,6 +31,15 @@ Make sure to create a dev-main branch
 
     git checkout -b dev-main origin/dev-main
 
+## Creating the .env file and assigning the right API token
+
+  1. Open the ".env.example" file
+  2. In your root directory, create a file named ".env"
+  3. Open the newly created .env file
+  4. Copy the variables listed in the ".env.example" file and paste it onto the .env file
+  5. In our Google Drive, go to the [API Tokens](https://docs.google.com/document/d/1dUSup56OvHKJWdhSUIE5RjaJvZmXjGY0zBlD3qfzys8/edit?pli=1) file
+  6. Copy the token and paste it to the corresponding environment variable in the ".env" file
+
 ### Setting up the master key for the development environment
 
 https://docs.google.com/document/d/1hG8qxppgxV9JiCqtOenOON5H-VXuxm0aVOkYyNMY7Zc/edit

@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby "3.2.1"
 
+gem 'dotenv', groups: [:development, :test]
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
@@ -75,3 +77,7 @@ gem "devise", "~> 4.9"
 gem "email_validator", "~> 2.2"
 
 gem "strong_password", "~> 0.0.10"
+
+gem "faraday", "~> 2.9"
+
+gem "dotenv-rails", "~> 3.1"
